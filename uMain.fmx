@@ -1,0 +1,950 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Pushover Test'
+  ClientHeight = 780
+  ClientWidth = 650
+  Constraints.MinHeight = 800.000000000000000000
+  Constraints.MinWidth = 650.000000000000000000
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object GroupBox1: TGroupBox
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 5.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 102.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Settings:'
+    TabOrder = 1
+    object ListBox1: TListBox
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 20.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 630.000000000000000000
+      Size.Height = 77.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 38
+      DisableFocusEffect = True
+      ItemHeight = 36.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 626.000000000000000000
+      Viewport.Height = 73.000000000000000000
+      object ListBoxItem2: TListBoxItem
+        Selectable = False
+        Size.Width = 626.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = '*App API Key:'
+        object edtKeyApi: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          TabOrder = 40
+          Password = True
+          TextSettings.HorzAlign = Center
+          Margins.Left = 100.000000000000000000
+          Margins.Top = 2.000000000000000000
+          Margins.Right = 2.000000000000000000
+          Margins.Bottom = 2.000000000000000000
+          Size.Width = 524.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          object btnShowPass2: TSpeedButton
+            Align = Right
+            Cursor = crArrow
+            Position.X = 482.000000000000000000
+            Size.Width = 42.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'passwordeditbutton'
+            Text = 'SpeedButton2'
+            OnMouseDown = btnShowPass1MouseDown
+            OnMouseUp = btnShowPass1MouseUp
+          end
+        end
+      end
+      object ListBoxItem1: TListBoxItem
+        Selectable = False
+        Position.Y = 36.000000000000000000
+        Size.Width = 626.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '*User/Group Key:'
+        object edtKeyUser: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          TabOrder = 40
+          Password = True
+          TextSettings.HorzAlign = Center
+          Margins.Left = 100.000000000000000000
+          Margins.Top = 2.000000000000000000
+          Margins.Right = 2.000000000000000000
+          Margins.Bottom = 2.000000000000000000
+          Size.Width = 524.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          object btnShowPass1: TSpeedButton
+            Align = Right
+            Cursor = crArrow
+            Position.X = 482.000000000000000000
+            Size.Width = 42.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'passwordeditbutton'
+            Text = 'SpeedButton2'
+            OnMouseDown = btnShowPass1MouseDown
+            OnMouseUp = btnShowPass1MouseUp
+          end
+        end
+      end
+    end
+  end
+  object GroupBox2: TGroupBox
+    Align = Client
+    Margins.Left = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 500.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Notification Message:'
+    TabOrder = 2
+    object edtImage: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Bottom
+      TabOrder = 39
+      TextSettings.HorzAlign = Center
+      Position.X = 2.000000000000000000
+      Position.Y = 349.000000000000000000
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 2.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Size.Width = 636.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      object btnClear1: TSpeedButton
+        Align = Right
+        Cursor = crArrow
+        Position.X = 594.000000000000000000
+        Size.Width = 42.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'trashtoolbutton'
+        Text = 'btnClear1'
+        OnClick = btnClear1Click
+      end
+      object btnImage: TSpeedButton
+        Align = Left
+        Cursor = crArrow
+        Size.Width = 42.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'cameratoolbutton'
+        Text = 'btnImage'
+        OnClick = btnImageClick
+      end
+    end
+    object Label1: TLabel
+      Align = Bottom
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Position.X = 2.000000000000000000
+      Position.Y = 328.000000000000000000
+      Size.Width = 636.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Image:'
+      TabOrder = 41
+    end
+    object Rectangle1: TRectangle
+      Align = Right
+      Fill.Kind = None
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 20.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Position.X = 460.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 178.000000000000000000
+      Size.Height = 301.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object Label2: TLabel
+        Align = Top
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 2.000000000000000000
+        Size.Width = 174.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Priority:'
+        TabOrder = 0
+      end
+      object cbPriority: TComboBox
+        Align = Top
+        Items.Strings = (
+          'Emergency'
+          'High'
+          'Normal'
+          'Lower'
+          'Lowest')
+        ItemIndex = 2
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 23.000000000000000000
+        Size.Width = 174.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+      object chkSetTimestamp: TCheckBox
+        Align = Top
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 62.000000000000000000
+        Size.Width = 174.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Set Timestamp'
+        OnChange = chkSetTimestampChange
+      end
+      object edtDate: TDateEdit
+        Date = 44839.000000000000000000
+        WeekNumbers = True
+        TodayDefault = True
+        Align = Top
+        Enabled = False
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 85.000000000000000000
+        Size.Width = 174.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        TextSettings.HorzAlign = Center
+      end
+      object edtTime: TTimeEdit
+        Time = 0.744655532407407500
+        Align = Top
+        Enabled = False
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 121.000000000000000000
+        Size.Width = 174.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        TabOrder = 4
+      end
+      object chkUseHtml: TCheckBox
+        Align = Top
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 160.000000000000000000
+        Size.Width = 174.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Use HTML in Content'
+      end
+      object chkUseMonospace: TCheckBox
+        Align = Top
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 183.000000000000000000
+        Size.Width = 174.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = 'Use Monospace Font'
+      end
+      object cbSound: TComboBox
+        Align = Top
+        Items.Strings = (
+          'Client default'
+          'Pushover (default)'
+          'Bike'
+          'Bugle'
+          'Cash Register'
+          'Classical'
+          'Cosmic'
+          'Falling'
+          'Gamelan'
+          'Incoming'
+          'Intermission'
+          'Magic'
+          'Mechanical'
+          'Piano Bar'
+          'Siren'
+          'Space Alarm'
+          'Tug Boat'
+          'Alien Alarm (long)'
+          'Climb (long)'
+          'Persistent (long)'
+          'Pushover Echo (long)'
+          'Up Down (long)'
+          'Vibrate Only'
+          'None (silent)')
+        ItemIndex = 0
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 227.000000000000000000
+        Size.Width = 174.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 7
+      end
+      object Label9: TLabel
+        Align = Top
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 206.000000000000000000
+        Size.Width = 174.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Sound:'
+        TabOrder = 8
+      end
+      object Rectangle3: TRectangle
+        Align = Bottom
+        Fill.Kind = None
+        Position.Y = 269.000000000000000000
+        Size.Width = 178.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object btnSend: TSpeedButton
+          Align = Client
+          Cursor = crArrow
+          Images = ilImages
+          ImageIndex = 0
+          Margins.Right = 2.000000000000000000
+          Size.Width = 176.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Send'
+          OnClick = btnSendClick
+        end
+      end
+    end
+    object Label3: TLabel
+      Align = Bottom
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Position.X = 2.000000000000000000
+      Position.Y = 388.000000000000000000
+      Size.Width = 636.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Link:'
+      TabOrder = 40
+    end
+    object edtLink: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Bottom
+      TabOrder = 38
+      TextSettings.HorzAlign = Center
+      Position.X = 2.000000000000000000
+      Position.Y = 409.000000000000000000
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 2.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Size.Width = 636.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      object btnClear2: TSpeedButton
+        Align = Right
+        Cursor = crArrow
+        Position.X = 594.000000000000000000
+        Size.Width = 42.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'trashtoolbutton'
+        Text = 'SpeedButton2'
+        OnClick = btnClear1Click
+      end
+    end
+    object Rectangle2: TRectangle
+      Align = Client
+      Fill.Kind = None
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 20.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Size.Width = 454.000000000000000000
+      Size.Height = 301.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object Label4: TLabel
+        Align = Top
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 2.000000000000000000
+        Size.Width = 450.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Title:'
+        TabOrder = 1
+      end
+      object edtTitle: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 3
+        Position.X = 2.000000000000000000
+        Position.Y = 23.000000000000000000
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Size.Width = 450.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object SpeedButton4: TSpeedButton
+          Align = Right
+          Cursor = crArrow
+          Position.X = 408.000000000000000000
+          Size.Width = 42.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'trashtoolbutton'
+          Text = 'btnClear1'
+          OnClick = btnClear1Click
+        end
+      end
+      object memContent: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Client
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Size.Width = 450.000000000000000000
+        Size.Height = 166.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 40
+        Viewport.Width = 446.000000000000000000
+        Viewport.Height = 162.000000000000000000
+      end
+      object Label5: TLabel
+        Align = Top
+        Position.Y = 57.000000000000000000
+        Size.Width = 454.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = '*Content:'
+        TabOrder = 41
+      end
+      object Label6: TLabel
+        Align = Bottom
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 246.000000000000000000
+        Size.Width = 450.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Devices:'
+        TabOrder = 0
+      end
+      object edtDevices: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Bottom
+        TabOrder = 2
+        Position.X = 2.000000000000000000
+        Position.Y = 267.000000000000000000
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Size.Width = 450.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object SpeedButton2: TSpeedButton
+          Align = Right
+          Cursor = crArrow
+          Position.X = 408.000000000000000000
+          Size.Width = 42.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'trashtoolbutton'
+          Text = 'btnClear1'
+          OnClick = btnClear1Click
+        end
+      end
+    end
+    object edtLinkTitle: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Bottom
+      TabOrder = 42
+      Position.X = 2.000000000000000000
+      Position.Y = 466.000000000000000000
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 2.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Size.Width = 636.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      object SpeedButton1: TSpeedButton
+        Align = Right
+        Cursor = crArrow
+        Position.X = 594.000000000000000000
+        Size.Width = 42.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'trashtoolbutton'
+        Text = 'btnClear1'
+        OnClick = btnClear1Click
+      end
+    end
+    object Label8: TLabel
+      Align = Bottom
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 2.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Position.X = 2.000000000000000000
+      Position.Y = 445.000000000000000000
+      Size.Width = 636.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Link Title:'
+      TabOrder = 43
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Bottom
+    Position.Y = 617.000000000000000000
+    Size.Width = 650.000000000000000000
+    Size.Height = 163.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 3
+    TabPosition = PlatformDefault
+    Sizes = (
+      650s
+      137s
+      650s
+      137s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 45.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Logs'
+      ExplicitSize.cx = 45.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object memLogs: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        ReadOnly = True
+        Align = Client
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Size.Width = 646.000000000000000000
+        Size.Height = 133.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 642.000000000000000000
+        Viewport.Height = 129.000000000000000000
+        object btnSaveLog: TSpeedButton
+          Anchors = [akTop, akRight]
+          Cursor = crArrow
+          Position.X = 2321.000000000000000000
+          Position.Y = 6.000000000000000000
+          Size.Width = 46.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'pagecurltoolbutton'
+          Text = 'btnSaveLog'
+        end
+        object btnClear3: TSpeedButton
+          Anchors = [akTop, akRight]
+          Cursor = crArrow
+          Position.X = 2366.000000000000000000
+          Position.Y = 6.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'trashtoolbutton'
+          Text = 'SpeedButton7'
+          OnClick = btnClear1Click
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 51.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Limits'
+      ExplicitSize.cx = 51.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object ListBox2: TListBox
+        Align = Client
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 20.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Size.Width = 646.000000000000000000
+        Size.Height = 115.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Columns = 2
+        DisableFocusEffect = True
+        ItemHeight = 32.000000000000000000
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 626.000000000000000000
+        Viewport.Height = 111.000000000000000000
+        object ListBoxGroupHeader1: TListBoxGroupHeader
+          Selectable = False
+          TextSettings.WordWrap = True
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 8
+          Text = 'Limits:'
+        end
+        object ListBoxGroupHeader2: TListBoxGroupHeader
+          Selectable = False
+          TextSettings.WordWrap = True
+          Position.X = 313.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 9
+          Text = 'Formatting:'
+        end
+        object ListBoxItem3: TListBoxItem
+          Selectable = False
+          TextSettings.WordWrap = True
+          StyledSettings = [Family, Size, Style, FontColor]
+          Position.Y = 32.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Messages Per Month: 0/10000'
+        end
+        object ListBoxItem4: TListBoxItem
+          Selectable = False
+          TextSettings.WordWrap = True
+          StyledSettings = [Family, Size, Style, FontColor]
+          Position.X = 313.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = '<b>word</b> - display word in bold'
+        end
+        object ListBoxItem5: TListBoxItem
+          Selectable = False
+          TextSettings.WordWrap = True
+          StyledSettings = [Family, Size, Style, FontColor]
+          Position.Y = 64.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Image Size Limit: 2,621,440 [B] (2.5MB)'
+        end
+        object ListBoxItem6: TListBoxItem
+          Selectable = False
+          TextSettings.WordWrap = True
+          StyledSettings = [Family, Size, Style, FontColor]
+          Position.X = 313.000000000000000000
+          Position.Y = 64.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = '<i>word</i> - display word in italics'
+        end
+        object ListBoxItem7: TListBoxItem
+          Selectable = False
+          TextSettings.WordWrap = True
+          StyledSettings = [Family, Size, Style, FontColor]
+          Position.Y = 96.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'Max Title length: ? unicode chars'
+        end
+        object ListBoxItem8: TListBoxItem
+          Selectable = False
+          TextSettings.WordWrap = True
+          StyledSettings = [Family, Size, Style, FontColor]
+          Position.X = 313.000000000000000000
+          Position.Y = 96.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          Text = '<u>word</u> - display word underlined'
+        end
+        object ListBoxItem9: TListBoxItem
+          Selectable = False
+          TextSettings.WordWrap = True
+          StyledSettings = [Family, Size, Style, FontColor]
+          Position.Y = 128.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          Text = ' Max Content length: 1024 [4B Unicode chars]'
+        end
+        object ListBoxItem10: TListBoxItem
+          Selectable = False
+          TextSettings.WordWrap = True
+          StyledSettings = [Family, Size, Style, FontColor]
+          Position.X = 313.000000000000000000
+          Position.Y = 128.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+        end
+        object ListBoxItem11: TListBoxItem
+          Selectable = False
+          TextSettings.WordWrap = True
+          StyledSettings = [Family, Size, Style, FontColor]
+          Position.Y = 160.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 10
+          Text = 'Max Title length: 250 [chars]'
+        end
+        object ListBoxItem12: TListBoxItem
+          Selectable = False
+          TextSettings.WordWrap = True
+          StyledSettings = [Family, Size, Style, FontColor]
+          Position.X = 313.000000000000000000
+          Position.Y = 160.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 11
+          Text = 
+            '<a href="http://example.com/">word</a> - display word as a tappa' +
+            'ble link to http://example.com/'
+        end
+        object ListBoxItem13: TListBoxItem
+          Position.Y = 192.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 12
+          Text = 'Max URL length: 512 [char]'
+        end
+        object ListBoxItem14: TListBoxItem
+          Position.X = 313.000000000000000000
+          Position.Y = 192.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 13
+        end
+        object ListBoxItem15: TListBoxItem
+          Position.Y = 224.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 14
+          Text = 'Max URL Title length: 100 [char]'
+        end
+        object ListBoxItem16: TListBoxItem
+          Position.X = 313.000000000000000000
+          Position.Y = 224.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 15
+        end
+        object ListBoxItem17: TListBoxItem
+          Position.Y = 256.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 16
+        end
+        object ListBoxItem18: TListBoxItem
+          Position.X = 313.000000000000000000
+          Position.Y = 256.000000000000000000
+          Size.Width = 313.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 17
+        end
+      end
+    end
+  end
+  object ilImages: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 96
+        MultiResBitmap.Width = 96
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 96
+            Height = 96
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000060000000600806000000E29877
+              38000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              075749444154785EED9D796C14551CC7BF6F66CFB2BDA0D003108A4038020285
+              52408E6090708812F148881AFF42F11F8D31FE69E23FFE658C9AA04431311163
+              881A4F0206A384FB28E5103002A5056CCBD5FBDCCECE38BFD9B7E976BB869D65
+              676786BE4F3299DFFBCDDBF77E33DFE9FBCDBE7DDB8540201008040281402010
+              0804028160D8C0F8FEBE18F7BE1AF404BA9F614CDB0805B3114121FCFAF620D1
+              8716C8C6764603FB41CB19B1ABFE65D6CB8FA6CD7D0B50FE49C7E688A6BE2743
+              1ACF5DC30245D5AE49127BBB7E6BEE37DC9516690B50B15DF336473A3FD2CD57
+              A29EE189066C1B25875EAFDEC2FAB9CB1412DF9BA659E9D8A1EF86F5C527F43B
+              786B73A4E3735E344D5A024CDCD6F912187B811705602FD250CC0BA6303D0495
+              6ED77202E1D6CB903DA5DC25308834F4CAF9531AB7B06EEE4809D37F018148E7
+              53E2E227432EF3453A37F042CA981F8234F5496E091260D0AC174065D23C6E0A
+              1250C12AB89932E924E112BE1724A045607A68362D80FE82103705097864E472
+              3365D2F90B1064102180CD08016C4608603342009B1102D88C10C0664C4FC695
+              6FEBD0B89912F93E60F3740D8F8DD3302A088CF0F2030EA5AB1FB8D303ECBBCE
+              F0F5DF0CED617E2045AE6ECD35754D2D15604A7E041FAC90509C634A33C7D0D4
+              CDF0C61F2A2EB7CBDC736FCC0A60D91034CAA7E069FF11345CBB045555B9D73D
+              50CC8D7AEC9B024750E051B837F35826C073C575E8E9EDC1F92BF5D87BA41AED
+              9DA6A6C96D8562A59829763A87E74BEBF991CC639900B97D37B905DC6D6DC7EE
+              83C770F95A03F738178A9162A59863E48707CE25D35826808408B7A228111547
+              CF5DC4FEEAB3E80DA7F5F9B5A5504C141BC548B1C693782E99C43201D62FAF42
+              79D9D099EBEB4DB7F1F3FEA3B871F336F7D80FC54231516C89948F2DC1FA650B
+              7929F3582680CFE3C192B933B174DE2CF8BC1EEE8DD2170EE3CF936771E8F485
+              21775B36A1BE29068A85628A8762A6D897CC99699C8B555826408C09A563B06E
+              E9428C1959C03D035CFDB711BB0F1C47735B07F7640FEA93FAA618121933B2D0
+              889962B71ACB05204604035855350F73A74D86240DEEB2BDAB0B7B0E9FC4D97F
+              6AA169D6BF5FA03EA8AF3D874E187DC723EBB1518CABAAE61A316783AC084030
+              C630F3E10958BDA802B92372B8370A3D739FBD7415BF1FAF41776F1FF7661E6A
+              7BDFB11AA32F3541ECBC500E1ED763A31829D66C913501628C2AC8D3935A25A6
+              4D1CBA94B4E94E0B7ED193615D43E61FFBEA1A9A8CB66FDE6DE19E012896754B
+              2B8DD8B24DD605206449C6FC9953B1BC6216FCBEC193436145C1C19ABF7882BE
+              FFC73F6A83DA3A5873DE683B1EEA9B62A05828263BB0458018E34BC6E0896555
+              281B5DC43D035072A43BF6564B2BF798875E4B6D244BB4D427F54D31D889AD02
+              1001BF0F2B2B1FC1FC19538724E8CE9E5EEC3B72CA74828E255A7A2DB5118F2C
+              4BA89A35DDE893FAB61BDB058831AD7C3CD62E5D8082BCC1AB5E285952D2DC7B
+              B81A9DDD3DDCFBFF501DAA9B2CD116EA6DAF797401263F54C63DF6E318018882
+              50086B17CF4FFA2472A7B50DBF1E3896743889517BA3D1A84375E3893D81ADD1
+              DBA63E9C84A304202459369EC55756CE41D0EFE7DE28FD4A34A11E38750EE1FE
+              81844A36F90E9FB960D48927271030DA32DE83E86D3B0DC70910A3B46824D62D
+              5B8871C5A3B96780FAC65BC69D7EABB9C5D8C8265F22E34B46EBC35AA5D19653
+              71AC0044407F4C5C317F364FD083EFDE2E4AD0C74E1B1BD9F150DDE863EE6CA3
+              0D27E36801625082DEB0BC0AA30BF3B9270ABD834EFCB48DEA50DD646FF49C88
+              2B0420423901AC5A5481D953CA934E15908F8E511DAAEB165C230021D1459E3A
+              09AB17D3450E722F8913347C748CEAB809570910A3A820DF982E2E1F5B6A6C64
+              93CF8DB85200C2EB91B164CE0C6323DBADB8568007052180CD08016C46086033
+              42009BB14C80B0E2CE05B9C9E853AC5B3A639900D75A9DB7FA2D5DEA9B5DB832
+              EEB78BEE598C7B2FF65E1CBC7C25935826C057273AD0D066DD9D932D6EB42AD8
+              797260A16EA6B14C808EB086D776DD4253BB7B4568D463A773E8EAB76E7EC932
+              01248F1797EF84B1E98B067C76B84D1F47FBE9FFACF1A3CE8562ACBBDB8FED87
+              DAB06947036A759B25AC6DCD24A6A54DF52B4A4A6BABBE0D5D04E5463C8585F0
+              E40F5DDB9A0CC77C4549CECB03B3705571B6A0739073AD9B69B54C002649F016
+              17BB5A048ADD575CA29F8B0B730021797DF0978E85A7A0403F19AF3EDE39FFC3
+              128A9179BD46CCFEB2B1866D2596E580E18A63728020358400362304B0997404
+              B06E62C4E5281198FEB29B69015415CEFFB6B54DE80FDCA6AF8D690124A6D670
+              539080266BA7B89932E6872026FDC82D41021AD84FDC4C19D302048B42DF4241
+              2D2F0A389A862B4572E83B5E4C19D3025C789685350F7B9717051C26E19D747E
+              C4C1FC10A453B735F4A5AEF9C7BC2880F6E1D5577377F28229D212801829E7BE
+              A9EF3E8D96862F1AB04DBF166FF1A269EE7B764CFC888F4D3FE2130FFD8C9537
+              D8B55185B64652D93CF42B93E0F7B867917E2AF429BDF07A6AC1B46A30B6470D
+              86BECFC4CF58090402814020100804028140201008860BC07F7E408344BB3716
+              A20000000049454E44AE426082}
+            FileName = 'D:\Delphi\Tests\Pushover4D\img\Post_96px.png'
+          end>
+        Name = 'Post_96px'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'Post_96px'
+            SourceRect.Right = 96.000000000000000000
+            SourceRect.Bottom = 96.000000000000000000
+          end>
+      end>
+    Left = 493
+    Top = 396
+  end
+  object dlgOpenImage: TOpenDialog
+    Filter = 
+      'Images (*.png;*.jpg;*.jpeg)|*.png;*.jpg;*.jpeg|PNG Images (*.png' +
+      ')|*.png|JPEG Images (*.jpg;*.jpeg)|*.jpg;*.jpeg'
+    Options = [ofReadOnly, ofPathMustExist, ofFileMustExist, ofNoTestFileCreate, ofEnableSizing, ofDontAddToRecent]
+    Left = 297
+    Top = 264
+  end
+end

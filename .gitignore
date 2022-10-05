@@ -1,0 +1,9 @@
+/keys.inc
+__history
+__recovery
+*.bak
+*.local
+*.res
+/bin
+/out
+*.identcache

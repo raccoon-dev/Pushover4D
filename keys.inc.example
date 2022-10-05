@@ -1,0 +1,5 @@
+// User/Group key
+const USER_KEY = '';
+
+// Application API key
+const API_KEY = '';
